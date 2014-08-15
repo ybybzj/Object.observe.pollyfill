@@ -1,0 +1,24 @@
+{
+  "name": "observe",
+  "version": "0.0.1",
+  "description": "Object.observe pollyfill",
+  "main": "src/observe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ybybzj <ybybzj@gmail.com> (https://github.com/ybybzj)",
+  "license": "ISC",
+  "devDependencies": {
+    "amdclean": "latest",
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "requirejs": "latest"
+  }
+}

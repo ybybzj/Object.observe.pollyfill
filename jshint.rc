@@ -1,0 +1,26 @@
+{
+	"expr":true,
+	"smarttabs":true,
+	"laxbreak":true,
+	"browser":true,
+	"devel":true,
+	"jquery":true,
+	"nonstandard":true,
+	"scripturl":true,
+	"multistr":true,
+	"eqnull":true,
+	"globals":{
+		"define":false,
+		"require":false,
+		"jasmine":false,
+		"describe":false,
+		"it":false,
+		"expect":false,
+		"beforeEach":false,
+		"afterEach":false,
+		"waitsFor":false,
+		"spyOn":false,
+		"runs":false
+	}
+}
+

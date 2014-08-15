@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script src="../build/observe.js"></script>
+    <script type="text/javascript">
+
+        function Square(x, y, width, height) {
+          this.x = x;
+          this.y = y;
+          this.width = width;
+          this.height = height;
+        }
+
+        Square.prototype = {
+          scale: function(ratio) {
+            Object.getNotifier(this).performChange('scale', function(){
+              this.width *= ratio;
+              this.height *= ratio;
+              return {
+                ratio: ratio
+              };
+            });
+          },
+
+          translate: function(dx, dy) {
+            Object.getNotifier(this).performChange('translate', function(){
+              this.x += dx;
+              this.y += dy;
+              return {
+                dx: dx,
+                dy: dy
+              };
+            });
+          }
+        }
+        Square.observe = function(square, callback) {
+          return Object.observe(square, callback, ['update', 'translate', 'scale']);
+        }
+        function squareObserver(recs) {
+          console.log.apply(console, recs);
+        }
+        var square = new Square(0, 0, 10, 10);
+        // var obr = function(changes){console.log.apply(console, changes);};
+        // $OB.observe(o, obr);
+        Square.observe(square, squareObserver);
+
+    </script>
+</body>
+</html>
